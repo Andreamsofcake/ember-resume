@@ -45,6 +45,52 @@
             </div>
         </div>
     </nav>
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('img/coffee.jpeg');"></div>
+                <div class="carousel-caption">
+                    <h2>Coffee Script/ Javascript</h2>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('img/building.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>HTML 5</h2>
+                    <br>
+                    <h2>CSS 3</h2>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('img/clouds.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Ember JS</h2>
+                    <br>
+                    <h2>Backbone JS</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+    </header>
     <br>
     <br>
   <script type="text/x-handlebars">
@@ -66,6 +112,11 @@
   <script src="js/libs/handlebars-v2.0.0.js"></script>
   <script src="js/libs/ember-1.9.1.js"></script>
   <script src="js/app.js"></script>
+  <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+  </script>
   <!-- to activate the test runner, add the "?test" query string parameter -->
   <script src="tests/runner.js"></script>
 </body>
