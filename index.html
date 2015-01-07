@@ -18,7 +18,6 @@
 </head>
 
 <body>
-  
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -38,7 +37,9 @@
                     <li>
                         <a href="blog.html">Blog</a>
                     </li>
-                    {{#link-to 'portfolio' class='navbar-brand'}}Portfolio{{/link-to}}
+                    <li>
+                        <a href="portfolio.html">Portfolio</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -91,26 +92,20 @@
     </header>
     <br>
     <br>
-  <script type="text/x-handlebars">
-
-
-    {{outlet}}
-  </script>
-
-  <script type="text/x-handlebars" id="index">
-    <ul>
-    {{#each item in model}}
-      <li>{{item}}</li>
-    {{/each}}
-    </ul>
-  </script>
-  <script type="text/x-handlebars" id="portfolio">
-    <ul>
-    {{#each item in model}}
-      <li>{{item}}</li>
-    {{/each}}
-    </ul>
-  </script>
+    <script type="text/x-handlebars" id="index">
+      <ul>
+      {{#each item in model}}
+        <li>{{item}}</li>
+      {{/each}}
+      </ul>
+    </script>
+    <script type="text/x-handlebars" id="portfolio">
+      <ul>
+      {{#each item in model}}
+        <li>{{item}}</li>
+      {{/each}}
+      </ul>
+    </script>
   <script src="js/libs/jquery-1.10.2.js">
   </script>
   <script src="js/bootstrap.min.js">
