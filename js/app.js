@@ -4,6 +4,7 @@ App.Router.map(function() {
   // put your routes here
   this.route('portfolio');
   this.route('resume');
+  this.route('blog');
 });
 
 App.IndexRoute = Ember.Route.extend({
