@@ -6,10 +6,11 @@
     <div id="content">Content</div>
     <script>
       function handleResponse(response) {
+        console.log(response);
         document.getElementById("content").innerHTML += "<h1>" + response.title + "</h1>" + response.content;
       }
     </script>
     <script
-    src="https://www.googleapis.com/blogger/v3/blogs/3213900/posts/8398240586497962757?callback=handleResponse&key=N9hcsbOhLF4QmexMr1F8kjZs"></script>
+    src="https://www.googleapis.com/blogger/v3/blogs/3213900/posts/8398240586497962757?callback=handleResponse&key=AIzaSyBo_YXKxnCo2CgAX9AQpyY70nCxs5xA8xc"></script>
   </body>
 </html>
