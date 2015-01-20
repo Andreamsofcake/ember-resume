@@ -7,7 +7,8 @@
     <script>
       function handleResponse(response) {
         console.log(response);
-        document.getElementById("content").innerHTML += "<h2>" + response.title + "</h2>" + "<h3>" + "Published" + " " + Date.parse(response.published) + "<h3>" + response.content;
+        var date = response.published;
+        document.getElementById("content").innerHTML += "<h2>" + response.title + "</h2>" + "<h3>" + "Published" + " " + date + "<h3>" + response.content;
       }
     </script>
     <script src="https://www.googleapis.com/blogger/v3/blogs/8203865104810827569/posts/6093434148019313119?callback=handleResponse&key=AIzaSyBo_YXKxnCo2CgAX9AQpyY70nCxs5xA8xc"></script>
