@@ -135,17 +135,21 @@
         </div>
     </script>
     <script type="text/x-handlebars" id="blog">
+      <script src="js/libs/jquery-1.10.2.js">
+          </script>
         <div id="content"></div>
-        <script>
-          function handleResponse(response) {
-            document.getElementById("content").innerHTML += "<h1>" + response.title + "</h1>" + response.content;
-          }
-        </script>
-        <script
-        src="https://www.googleapis.com/blogger/v3/blogs/8203865104810827569/posts/6093434148019313119?callback=handleResponse&key=AIzaSyBo_YXKxnCo2CgAX9AQpyY70nCxs5xA8xc"></script>
+          <script>
+            function handleResponse(response) {
+              console.log(response);
+              var posts = response.items;
+              posts.forEach(function(post){
+                var date = post.published;
+              document.getElementById("content").innerHTML += "<h2>" + post.title + "</h2>" + "<h3>" + "Published" + " " + date + "<h3>" + post.content;
+              });
+            }
+          </script>
+        <script src="https://www.googleapis.com/blogger/v3/blogs/8203865104810827569/posts?callback=handleResponse&key=AIzaSyBo_YXKxnCo2CgAX9AQpyY70nCxs5xA8xc"></script>
     </script>
-  <script src="js/libs/jquery-1.10.2.js">
-  </script>
   <script src="js/bootstrap.min.js">
   </script>
   <script src="js/libs/handlebars-v2.0.0.js"></script>

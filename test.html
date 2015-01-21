@@ -6,7 +6,7 @@
     <div id="content"></div>
     <script>
       function handleResponse(response) {
-        console.log(response.items);
+        console.log(response);
         var posts = response.items;
         posts.forEach(function(post){
           var date = post.published;
