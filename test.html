@@ -8,8 +8,10 @@
       function handleResponse(response) {
         console.log(response.items);
         var posts = response.items;
-        var date = post.published;
+        posts.forEach(function(post){
+          var date = post.published;
         document.getElementById("content").innerHTML += "<h2>" + post.title + "</h2>" + "<h3>" + "Published" + " " + date + "<h3>" + post.content;
+        });
       }
     </script>
     <script src="https://www.googleapis.com/blogger/v3/blogs/8203865104810827569/posts?callback=handleResponse&key=AIzaSyBo_YXKxnCo2CgAX9AQpyY70nCxs5xA8xc"></script>
