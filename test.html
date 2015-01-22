@@ -4,13 +4,14 @@
   </head>
   <body>
     <div id="content"></div>
+    <script src="js/moment/min/moment.min.js"></script>
     <script>
       function handleResponse(response) {
         console.log(response);
         var posts = response.items;
         posts.forEach(function(post){
           var date = post.published;
-        document.getElementById("content").innerHTML += "<h2>" + post.title + "</h2>" + "<h3>" + "Published" + " " + moment(date).format('h:mmA'); + "<h3>" + post.content;
+        document.getElementById("content").innerHTML += "<h2>" + post.title + "</h2>" + "<h3>" + "Published" + " " + moment(date).format('MMM DD YYYY h:mmA') + "<h3>" + post.content;
         });
       }
     </script>
