@@ -11,6 +11,8 @@
   <title>Andrea Moulding</title>
   <!-- Bootstrap Core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Main CSS -->
+    <link href="css/main.css" rel="stylesheet">
   <!-- Custom CSS -->
   <link href="css/half-slider.css" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
@@ -137,18 +139,24 @@
     <script type="text/x-handlebars" id="blog">
       <script src="js/libs/jquery-1.10.2.js">
           </script>
-          <h1>Learning Blog</h1>
-        <div class="jumbotron" id="content"></div>
-          <script src="js/moment/min/moment.min.js"></script>
-          <script>
-            function handleResponse(response) {
-              console.log(response);
-              var posts = response.items;
-              posts.forEach(function(post){
-                var date = post.published;
-              document.getElementById("content").innerHTML += "<h3>" + post.title + "</h3>" + "<h4>" + "Published" + " " + moment(date).format('MMM DD YYYY h:mmA') + "<h4>" + "<p>" + post.content + "</p>";
-              });
-            }
+          <div class="row">
+            <div class="col-lg-12">
+                <h1>Learning Blog</h1>
+                <div class="jumbotron" id="content"></div>
+                    <script src="js/moment/min/moment.min.js"></script>
+                    <script>
+                    function handleResponse(response) {
+                      console.log(response);
+                      var posts = response.items;
+                      posts.forEach(function(post){
+                        var date = post.published;
+                      document.getElementById("content").innerHTML += "<h3>" + post.title + "</h3>" + "<h4>" + "Published" + " " + moment(date).format('MMM DD YYYY h:mmA') + "<h4>" + "<p>" + post.content + "</p>";
+                      });
+                    }
+                    </script>
+                    <script src="https://www.googleapis.com/blogger/v3/blogs/8203865104810827569/posts?callback=handleResponse&key=AIzaSyBo_YXKxnCo2CgAX9AQpyY70nCxs5xA8xc"></script>
+            </div>
+        </div>
           </script>
           <script src="https://www.googleapis.com/blogger/v3/blogs/8203865104810827569/posts?callback=handleResponse&key=AIzaSyBo_YXKxnCo2CgAX9AQpyY70nCxs5xA8xc"></script>
     </script>

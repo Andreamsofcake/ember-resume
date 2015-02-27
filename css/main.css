@@ -1,0 +1,8 @@
+.top-buffer {
+  margin-top:20px;
+}
+@media screen and (max-width: 480px) {
+  .phone-veiw {
+  display: none;
+  }
+}
