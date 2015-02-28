@@ -137,39 +137,26 @@
         </div>
     </script>
     <script type="text/x-handlebars" id="blog">
-      <script src="js/libs/jquery-1.10.2.js">
-          </script>
-          <div class="row">
-            <div class="col-lg-12">
-                <h1>Learning Blog</h1>
-                <div class="jumbotron" id="content"></div>
-                    <script src="js/moment/min/moment.min.js"></script>
-                    <script>
-                    function handleResponse(response) {
-                      console.log(response);
-                      var posts = response.items;
-                      posts.forEach(function(post){
-                        var date = post.published;
-                      document.getElementById("content").innerHTML += "<h3>" + post.title + "</h3>" + "<h4>" + "Published" + " " + moment(date).format('MMM DD YYYY h:mmA') + "<h4>" + "<p>" + post.content + "</p>";
-                      });
-                    }
-                    </script>
-                    <script src="https://www.googleapis.com/blogger/v3/blogs/8203865104810827569/posts?callback=handleResponse&key=AIzaSyBo_YXKxnCo2CgAX9AQpyY70nCxs5xA8xc"></script>
-            </div>
-        </div>
-          </script>
-          <script src="https://www.googleapis.com/blogger/v3/blogs/8203865104810827569/posts?callback=handleResponse&key=AIzaSyBo_YXKxnCo2CgAX9AQpyY70nCxs5xA8xc"></script>
     </script>
-  <script src="js/bootstrap.min.js">
-  </script>
-  <script src="js/libs/handlebars-v2.0.0.js"></script>
-  <script src="js/libs/ember-1.9.1.js"></script>
-  <script src="js/app.js"></script>
-  <script>
+
+    <!-- jQuery Version 1.10.2 -->
+    <script src="js/libs/jquery-1.10.2.js"></script>
+    <!-- Handlebars-v2.0,0 -->
+    <script src="js/libs/handlebars-v2.0.0.js"></script>
+    <!-- Ember js v1.9.1 -->
+    <script src="js/libs/ember-1.9.1.js"></script>
+    <script src="js/app.js"></script>
+    
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
     $('.carousel').carousel({
         interval: 5000 //changes the speed
     })
-  </script>
+    </script>
   <!-- to activate the test runner, add the "?test" query string parameter -->
   <script src="tests/runner.js"></script>
 </body>
